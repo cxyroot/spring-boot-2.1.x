@@ -1,0 +1,15 @@
+<metadata>
+  <groupId>org.apache</groupId>
+  <artifactId>apache</artifactId>
+  <versioning>
+    <versions>
+      <version>19</version>
+      <version>18</version>
+      <version>16</version>
+      <version>17</version>
+      <version>23</version>
+      <version>21</version>
+    </versions>
+    <lastUpdated>20220212075201</lastUpdated>
+  </versioning>
+</metadata>

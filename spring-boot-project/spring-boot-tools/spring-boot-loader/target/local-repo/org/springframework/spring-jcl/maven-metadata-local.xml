@@ -1,0 +1,10 @@
+<metadata>
+  <groupId>org.springframework</groupId>
+  <artifactId>spring-jcl</artifactId>
+  <versioning>
+    <versions>
+      <version>5.1.16.RELEASE</version>
+    </versions>
+    <lastUpdated>20220212075145</lastUpdated>
+  </versioning>
+</metadata>

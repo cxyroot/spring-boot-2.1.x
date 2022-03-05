@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata>
+  <groupId>org.springframework.boot</groupId>
+  <artifactId>spring-boot-tools</artifactId>
+  <versioning>
+    <versions>
+      <version>2.1.16.BUILD-SNAPSHOT</version>
+    </versions>
+    <lastUpdated>20220212075201</lastUpdated>
+  </versioning>
+</metadata>

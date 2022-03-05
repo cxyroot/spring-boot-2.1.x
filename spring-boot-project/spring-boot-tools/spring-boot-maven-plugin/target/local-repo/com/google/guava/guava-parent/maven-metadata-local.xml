@@ -1,0 +1,11 @@
+<metadata>
+  <groupId>com.google.guava</groupId>
+  <artifactId>guava-parent</artifactId>
+  <versioning>
+    <versions>
+      <version>28.2-android</version>
+      <version>26.0-android</version>
+    </versions>
+    <lastUpdated>20220212075201</lastUpdated>
+  </versioning>
+</metadata>
