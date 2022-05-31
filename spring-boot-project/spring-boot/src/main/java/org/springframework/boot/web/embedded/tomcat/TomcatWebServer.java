@@ -105,7 +105,7 @@ public class TomcatWebServer implements WebServer {
 
 				// Start the server to trigger initialization listeners
 				this.tomcat.start();
-
+				System.out.println(this.tomcat);
 				// We can re-throw failure exception directly in the main thread
 				rethrowDeferredStartupExceptions();
 
