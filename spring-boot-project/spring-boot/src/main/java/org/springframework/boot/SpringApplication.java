@@ -264,13 +264,17 @@ public class SpringApplication {
 	public SpringApplication(ResourceLoader resourceLoader, Class<?>... primarySources) {
 		System.out.println("org.springframework.boot.SpringApplication.SpringApplication(org.springframework.core.io.ResourceLoader, java.lang.Class<?>...)");
 		this.resourceLoader = resourceLoader;
+
 		Assert.notNull(primarySources, "PrimarySources must not be null");
 		this.primarySources = new LinkedHashSet<>(Arrays.asList(primarySources));
 		this.webApplicationType = WebApplicationType.deduceFromClasspath();
+
 		Collection applicationContextInitializerCollection = getSpringFactoriesInstances(ApplicationContextInitializer.class);
 		setInitializers((Collection)applicationContextInitializerCollection);
+
 		Collection applicationListenerCollection = getSpringFactoriesInstances(ApplicationListener.class);
 		setListeners((Collection)applicationListenerCollection);
+
 		this.mainApplicationClass = deduceMainApplicationClass();
 	}
 

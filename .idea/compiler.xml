@@ -101,7 +101,7 @@
       <module name="spring-boot-devtools" options="-parameters" />
       <module name="spring-boot-devtools-tests" options="-parameters" />
       <module name="spring-boot-docs" options="-parameters" />
-      <module name="spring-boot-gradle-plugin" options="-parameters" />
+      <module name="spring-boot-gradle-plugin" options="" />
       <module name="spring-boot-hibernate52-tests" options="-parameters" />
       <module name="spring-boot-launch-script-tests" options="-parameters" />
       <module name="spring-boot-loader" options="-parameters" />
@@ -167,7 +167,7 @@
       <module name="spring-boot-test" options="-parameters" />
       <module name="spring-boot-test-autoconfigure" options="-parameters" />
       <module name="spring-boot-test-support" options="-parameters" />
-      <module name="spring-boot-tools" options="" />
+      <module name="spring-boot-tools" options="-parameters" />
     </option>
   </component>
 </project>

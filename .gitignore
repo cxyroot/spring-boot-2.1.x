@@ -1,1 +1,11 @@
 /spring-boot-project/spring-boot/target/
+/spring-boot-project/spring-boot-actuator/target/
+/spring-boot-samples/spring-boot-sample-tomcat/target/
+/spring-boot-project/spring-boot-cli/target/
+/spring-boot-project/spring-boot-actuator-autoconfigure/target/
+/spring-boot-project/target/
+/spring-boot-project/spring-boot-tools/spring-boot-test-support/target/
+/spring-boot-tests/spring-boot-integration-tests/spring-boot-server-tests/target/
+/target/
+/spring-boot-tests/spring-boot-integration-tests/spring-boot-server-tests/target/
+/spring-boot-tests/spring-boot-integration-tests/spring-boot-launch-script-tests/target/
