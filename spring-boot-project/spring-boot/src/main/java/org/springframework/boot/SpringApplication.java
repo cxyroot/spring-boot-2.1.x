@@ -266,7 +266,8 @@ public class SpringApplication {
 		this.resourceLoader = resourceLoader;
 
 		Assert.notNull(primarySources, "PrimarySources must not be null");
-		this.primarySources = new LinkedHashSet<>(Arrays.asList(primarySources));
+		List<Class<?>> classes = Arrays.asList(primarySources);
+		this.primarySources = new LinkedHashSet<>(classes);
 		this.webApplicationType = WebApplicationType.deduceFromClasspath();
 
 		Collection applicationContextInitializerCollection = getSpringFactoriesInstances(ApplicationContextInitializer.class);
@@ -276,6 +277,7 @@ public class SpringApplication {
 		setListeners((Collection)applicationListenerCollection);
 
 		this.mainApplicationClass = deduceMainApplicationClass();
+		System.out.println(this.mainApplicationClass);//class sample.tomcat.SampleTomcatApplication
 	}
 
 	private Class<?> deduceMainApplicationClass() {
@@ -284,7 +286,7 @@ public class SpringApplication {
 			for (StackTraceElement stackTraceElement : stackTrace) {
 				if ("main".equals(stackTraceElement.getMethodName())) {
 					Class<? extends StackTraceElement[]> aClass = stackTrace.getClass();
-					System.out.println(aClass);
+					System.out.println("org.springframework.boot.SpringApplication.deduceMainApplicationClass"+aClass.getName());
 					return Class.forName(stackTraceElement.getClassName());
 				}
 			}
@@ -1159,6 +1161,7 @@ public class SpringApplication {
 	 * @param initializers the initializers to set
 	 */
 	public void setInitializers(Collection<? extends ApplicationContextInitializer<?>> initializers) {
+		System.out.println("org.springframework.boot.SpringApplication.setInitializers");
 		this.initializers = new ArrayList<>();
 		this.initializers.addAll(initializers);
 	}
