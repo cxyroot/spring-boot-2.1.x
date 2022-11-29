@@ -57,6 +57,13 @@ public class SampleTomcatApplication {
 		//AnnotationConfigServletWebServerApplicationContext
 		SpringApplication application = new SpringApplication(SampleTomcatApplication.class);
 		application.run();
+
+		/*
+		StackTraceElement[] stackTrace = new RuntimeException().getStackTrace();
+		for (StackTraceElement stackTraceElement : stackTrace) {
+			System.out.println(stackTraceElement.getClass().toString());
+		}
+		*/
 	}
 
 }
