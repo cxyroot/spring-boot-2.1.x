@@ -23,6 +23,7 @@ import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 
 import org.springframework.boot.SpringApplication;
+import org.springframework.boot.WebApplicationType;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
 
@@ -56,9 +57,16 @@ public class SampleTomcatApplication {
 		//String
 		//AnnotationConfigServletWebServerApplicationContext
 		SpringApplication application = new SpringApplication(SampleTomcatApplication.class);
+
+		//推断 Web 应用类型
+		//application.setWebApplicationType(WebApplicationType.NONE);
+
 		application.run();
 
+
+
 		/*
+		StackTraceElement[] stackTrace = Thread.currentThread().getStackTrace();
 		StackTraceElement[] stackTrace = new RuntimeException().getStackTrace();
 		for (StackTraceElement stackTraceElement : stackTrace) {
 			System.out.println(stackTraceElement.getClass().toString());

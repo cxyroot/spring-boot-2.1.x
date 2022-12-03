@@ -71,6 +71,7 @@ public class AnnotationConfigServletWebServerApplicationContext extends ServletW
 	 * {@linkplain #refresh refreshed}.
 	 */
 	public AnnotationConfigServletWebServerApplicationContext() {
+		System.out.println("org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext.AnnotationConfigServletWebServerApplicationContext()");
 		this.reader = new AnnotatedBeanDefinitionReader(this);
 		this.scanner = new ClassPathBeanDefinitionScanner(this);
 	}

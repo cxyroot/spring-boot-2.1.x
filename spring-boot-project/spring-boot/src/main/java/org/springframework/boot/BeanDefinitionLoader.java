@@ -75,10 +75,13 @@ class BeanDefinitionLoader {
 	 * @param sources the bean sources
 	 */
 	BeanDefinitionLoader(BeanDefinitionRegistry registry, Object... sources) {
+		System.out.println("org.springframework.boot.BeanDefinitionLoader.BeanDefinitionLoader");
 		Assert.notNull(registry, "Registry must not be null");
 		Assert.notEmpty(sources, "Sources must not be empty");
 		this.sources = sources;
+		//AnnotatedBeanDefinitionReader
 		this.annotatedReader = new AnnotatedBeanDefinitionReader(registry);
+		//XmlBeanDefinitionReader
 		this.xmlReader = new XmlBeanDefinitionReader(registry);
 		if (isGroovyPresent()) {
 			this.groovyReader = new GroovyBeanDefinitionReader(registry);

@@ -183,7 +183,7 @@ public class SpringApplication {
 	/**
 	 * Default banner location.
 	 */
-	public static final String BANNER_LOCATION_PROPERTY_VALUE = SpringApplicationBannerPrinter.DEFAULT_BANNER_LOCATION;
+	//public static final String BANNER_LOCATION_PROPERTY_VALUE = SpringApplicationBannerPrinter.DEFAULT_BANNER_LOCATION;
 
 	/**
 	 * Banner location property key.
@@ -268,6 +268,7 @@ public class SpringApplication {
 		Assert.notNull(primarySources, "PrimarySources must not be null");
 		List<Class<?>> classes = Arrays.asList(primarySources);
 		this.primarySources = new LinkedHashSet<>(classes);
+
 		this.webApplicationType = WebApplicationType.deduceFromClasspath();
 
 		Collection applicationContextInitializerCollection = getSpringFactoriesInstances(ApplicationContextInitializer.class);
@@ -276,6 +277,7 @@ public class SpringApplication {
 		Collection applicationListenerCollection = getSpringFactoriesInstances(ApplicationListener.class);
 		setListeners((Collection)applicationListenerCollection);
 
+		System.out.println("推断引导类！！！");
 		this.mainApplicationClass = deduceMainApplicationClass();
 		System.out.println(this.mainApplicationClass);//class sample.tomcat.SampleTomcatApplication
 	}
@@ -308,11 +310,17 @@ public class SpringApplication {
 		System.out.println("org.springframework.boot.SpringApplication.run(java.lang.String...)");
 		StopWatch stopWatch = new StopWatch();
 		stopWatch.start();
+
 		ConfigurableApplicationContext context = null;
+
 		Collection<SpringBootExceptionReporter> exceptionReporters = new ArrayList<>();
 		configureHeadlessProperty();
+
 		SpringApplicationRunListeners listeners = getRunListeners(args);
+		System.out.println(listeners);
+		//
 		listeners.starting();
+
 		try {
 			ApplicationArguments applicationArguments = new DefaultApplicationArguments(args);
 			ConfigurableEnvironment environment = prepareEnvironment(listeners, applicationArguments);
@@ -421,6 +429,7 @@ public class SpringApplication {
 	}
 
 	private SpringApplicationRunListeners getRunListeners(String[] args) {
+		System.out.println("org.springframework.boot.SpringApplication.getRunListeners");
 		Class<?>[] types = new Class<?>[] { SpringApplication.class, String[].class };
 		return new SpringApplicationRunListeners(logger,
 				getSpringFactoriesInstances(SpringApplicationRunListener.class, types, this, args));
@@ -433,6 +442,8 @@ public class SpringApplication {
 	private <T> Collection<T> getSpringFactoriesInstances(Class<T> type, Class<?>[] parameterTypes, Object... args) {
 		ClassLoader classLoader = getClassLoader();
 		// Use names and ensure unique to protect against duplicates
+		System.out.println("org.springframework.core.io.support.SpringFactoriesLoader.loadFactoryNames");
+		//loadFactoryNames
 		Set<String> names = new LinkedHashSet<>(SpringFactoriesLoader.loadFactoryNames(type, classLoader));
 		List<T> instances = createSpringFactoriesInstances(type, parameterTypes, classLoader, args, names);
 		AnnotationAwareOrderComparator.sort(instances);
@@ -1163,6 +1174,10 @@ public class SpringApplication {
 	public void setInitializers(Collection<? extends ApplicationContextInitializer<?>> initializers) {
 		System.out.println("org.springframework.boot.SpringApplication.setInitializers");
 		this.initializers = new ArrayList<>();
+		for (ApplicationContextInitializer<?> initializer : initializers) {
+			System.out.println("org.springframework.boot.SpringApplication.setInitializers");
+			System.out.println(initializer);
+		}
 		this.initializers.addAll(initializers);
 	}
 

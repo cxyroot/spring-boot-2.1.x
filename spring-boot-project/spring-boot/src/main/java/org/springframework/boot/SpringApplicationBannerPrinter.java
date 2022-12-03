@@ -86,6 +86,7 @@ class SpringApplicationBannerPrinter {
 	}
 
 	private Banner getTextBanner(Environment environment) {
+		System.out.println("org.springframework.boot.SpringApplicationBannerPrinter.getTextBanner");
 		String location = environment.getProperty(BANNER_LOCATION_PROPERTY, DEFAULT_BANNER_LOCATION);
 		Resource resource = this.resourceLoader.getResource(location);
 		if (resource.exists()) {

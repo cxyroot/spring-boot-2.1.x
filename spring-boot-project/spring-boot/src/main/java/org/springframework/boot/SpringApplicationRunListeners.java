@@ -39,46 +39,57 @@ class SpringApplicationRunListeners {
 
 	SpringApplicationRunListeners(Log log, Collection<? extends SpringApplicationRunListener> listeners) {
 		this.log = log;
+		for (SpringApplicationRunListener listener : listeners) {
+			System.out.println(listener);
+		}
 		this.listeners = new ArrayList<>(listeners);
 	}
 
 	public void starting() {
+		//组合对象模式
+		System.out.println("org.springframework.boot.SpringApplicationRunListeners.starting");
 		for (SpringApplicationRunListener listener : this.listeners) {
 			listener.starting();
 		}
 	}
 
 	public void environmentPrepared(ConfigurableEnvironment environment) {
+		System.out.println("org.springframework.boot.SpringApplicationRunListeners.environmentPrepared");
 		for (SpringApplicationRunListener listener : this.listeners) {
 			listener.environmentPrepared(environment);
 		}
 	}
 
 	public void contextPrepared(ConfigurableApplicationContext context) {
+		System.out.println("org.springframework.boot.SpringApplicationRunListeners.contextPrepared");
 		for (SpringApplicationRunListener listener : this.listeners) {
 			listener.contextPrepared(context);
 		}
 	}
 
 	public void contextLoaded(ConfigurableApplicationContext context) {
+		System.out.println("org.springframework.boot.SpringApplicationRunListeners.contextLoaded");
 		for (SpringApplicationRunListener listener : this.listeners) {
 			listener.contextLoaded(context);
 		}
 	}
 
 	public void started(ConfigurableApplicationContext context) {
+		System.out.println("org.springframework.boot.SpringApplicationRunListeners.started");
 		for (SpringApplicationRunListener listener : this.listeners) {
 			listener.started(context);
 		}
 	}
 
 	public void running(ConfigurableApplicationContext context) {
+		System.out.println("org.springframework.boot.SpringApplicationRunListeners.running");
 		for (SpringApplicationRunListener listener : this.listeners) {
 			listener.running(context);
 		}
 	}
 
 	public void failed(ConfigurableApplicationContext context, Throwable exception) {
+		System.out.println("org.springframework.boot.SpringApplicationRunListeners.failed");
 		for (SpringApplicationRunListener listener : this.listeners) {
 			callFailedListener(listener, context, exception);
 		}
