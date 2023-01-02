@@ -26,6 +26,7 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.WebApplicationType;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
+import org.springframework.core.io.support.SpringFactoriesLoader;
 
 @SpringBootApplication
 public class SampleTomcatApplication {
@@ -62,8 +63,11 @@ public class SampleTomcatApplication {
 		//application.setWebApplicationType(WebApplicationType.NONE);
 
 		application.run();
+		//观察者设计模式
 
-
+		//SpringFactoriesLoader.loadSpringFactories()
+		//org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent
+		//(org.springframework.context.ApplicationEvent, org.springframework.core.ResolvableType)
 
 		/*
 		StackTraceElement[] stackTrace = Thread.currentThread().getStackTrace();

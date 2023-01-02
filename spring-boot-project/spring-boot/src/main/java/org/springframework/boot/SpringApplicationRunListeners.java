@@ -47,8 +47,10 @@ class SpringApplicationRunListeners {
 
 	public void starting() {
 		//组合对象模式
+		System.out.println("组合对象模式");
 		System.out.println("org.springframework.boot.SpringApplicationRunListeners.starting");
 		for (SpringApplicationRunListener listener : this.listeners) {
+			System.err.println(listener.toString());
 			listener.starting();
 		}
 	}

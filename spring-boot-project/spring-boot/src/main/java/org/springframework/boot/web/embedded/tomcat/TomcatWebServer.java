@@ -174,6 +174,7 @@ public class TomcatWebServer implements WebServer {
 	}
 
 	private void startDaemonAwaitThread() {
+		System.out.println("org.springframework.boot.web.embedded.tomcat.TomcatWebServer.startDaemonAwaitThread");
 		Thread awaitThread = new Thread("container-" + (containerCounter.get())) {
 
 			@Override

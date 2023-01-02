@@ -9,3 +9,4 @@
 /target/
 /spring-boot-tests/spring-boot-integration-tests/spring-boot-server-tests/target/
 /spring-boot-tests/spring-boot-integration-tests/spring-boot-launch-script-tests/target/
+/spring-boot-samples/spring-boot-sample-tomcat/target/
