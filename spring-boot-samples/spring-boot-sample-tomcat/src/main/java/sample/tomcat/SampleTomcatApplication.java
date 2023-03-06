@@ -61,7 +61,6 @@ public class SampleTomcatApplication {
 
 		//推断 Web 应用类型
 		//application.setWebApplicationType(WebApplicationType.NONE);
-
 		application.run();
 		//观察者设计模式
 

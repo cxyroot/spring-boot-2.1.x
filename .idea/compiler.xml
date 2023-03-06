@@ -26,9 +26,9 @@
         <module name="spring-boot-starter-data-ldap" />
         <module name="spring-boot-starter-jdbc" />
         <module name="spring-boot-starter-aop" />
-        <module name="spring-boot-starter-webflux" />
-        <module name="spring-boot-starter-amqp" />
         <module name="spring-boot-autoconfigure" />
+        <module name="spring-boot-starter-amqp" />
+        <module name="spring-boot-starter-webflux" />
         <module name="spring-boot-starter-data-redis-reactive" />
         <module name="spring-boot-starter-websocket" />
         <module name="spring-boot-configuration-metadata" />
@@ -43,16 +43,16 @@
         <module name="spring-boot" />
         <module name="spring-boot-starter-mustache" />
         <module name="spring-boot-starter-data-cassandra" />
-        <module name="spring-boot-starter-quartz" />
-        <module name="spring-boot-starter-logging" />
         <module name="spring-boot-starter-log4j2" />
+        <module name="spring-boot-starter-logging" />
+        <module name="spring-boot-starter-quartz" />
         <module name="spring-boot-loader" />
         <module name="spring-boot-starter-data-mongodb-reactive" />
         <module name="spring-boot-starter-oauth2-resource-server" />
         <module name="spring-boot-starter-tomcat" />
         <module name="spring-boot-starter-oauth2-client" />
-        <module name="spring-boot-starter-data-cassandra-reactive" />
         <module name="spring-boot-properties-migrator" />
+        <module name="spring-boot-starter-data-cassandra-reactive" />
         <module name="spring-boot-starter-jta-atomikos" />
         <module name="spring-boot-starter-data-mongodb" />
         <module name="spring-boot-actuator" />
@@ -69,15 +69,15 @@
         <module name="spring-boot-starter-thymeleaf" />
         <module name="spring-boot-starter-freemarker" />
         <module name="spring-boot-starter-hateoas" />
+        <module name="spring-boot-launch-script-tests" />
         <module name="spring-boot-starter-data-couchbase-reactive" />
         <module name="spring-boot-starter-jetty" />
-        <module name="spring-boot-launch-script-tests" />
         <module name="spring-boot-starter-data-jdbc" />
         <module name="spring-boot-starter-actuator" />
         <module name="spring-boot-hibernate52-tests" />
         <module name="spring-boot-starter-web" />
-        <module name="spring-boot-starter-data-jpa" />
         <module name="spring-boot-maven-plugin" />
+        <module name="spring-boot-starter-data-jpa" />
         <module name="spring-boot-starter-artemis" />
         <module name="spring-boot-test-autoconfigure" />
         <module name="spring-boot-docs" />
@@ -103,18 +103,18 @@
       <module name="spring-boot-devtools" options="-parameters" />
       <module name="spring-boot-devtools-tests" options="-parameters" />
       <module name="spring-boot-docs" options="-parameters" />
-      <module name="spring-boot-gradle-plugin" options="-parameters" />
+      <module name="spring-boot-gradle-plugin" options="" />
       <module name="spring-boot-hibernate52-tests" options="-parameters" />
-      <module name="spring-boot-integration-tests" options="-parameters" />
+      <module name="spring-boot-integration-tests" options="" />
       <module name="spring-boot-launch-script-tests" options="-parameters" />
       <module name="spring-boot-loader" options="-parameters" />
       <module name="spring-boot-loader-tools" options="-parameters" />
       <module name="spring-boot-maven-plugin" options="-parameters" />
-      <module name="spring-boot-parent" options="-parameters" />
+      <module name="spring-boot-parent" options="" />
       <module name="spring-boot-properties-migrator" options="-parameters" />
       <module name="spring-boot-sample-jetty" options="-parameters" />
       <module name="spring-boot-sample-tomcat" options="-parameters" />
-      <module name="spring-boot-samples-invoker" options="-parameters" />
+      <module name="spring-boot-samples-invoker" options="" />
       <module name="spring-boot-server-tests" options="-parameters" />
       <module name="spring-boot-starter" options="-parameters" />
       <module name="spring-boot-starter-activemq" options="-parameters" />
@@ -169,12 +169,12 @@
       <module name="spring-boot-starter-web-services" options="-parameters" />
       <module name="spring-boot-starter-webflux" options="-parameters" />
       <module name="spring-boot-starter-websocket" options="-parameters" />
-      <module name="spring-boot-starters" options="-parameters" />
+      <module name="spring-boot-starters" options="" />
       <module name="spring-boot-test" options="-parameters" />
       <module name="spring-boot-test-autoconfigure" options="-parameters" />
       <module name="spring-boot-test-support" options="-parameters" />
-      <module name="spring-boot-tests" options="-parameters" />
-      <module name="spring-boot-tools" options="-parameters" />
+      <module name="spring-boot-tests" options="" />
+      <module name="spring-boot-tools" options="" />
     </option>
   </component>
 </project>
