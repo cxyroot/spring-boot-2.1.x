@@ -25,7 +25,9 @@ import org.apache.commons.logging.LogFactory;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.WebApplicationType;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.context.annotation.Bean;
+import org.springframework.core.io.ContextResource;
 import org.springframework.core.io.support.SpringFactoriesLoader;
 
 @SpringBootApplication
@@ -61,7 +63,11 @@ public class SampleTomcatApplication {
 
 		//推断 Web 应用类型
 		//application.setWebApplicationType(WebApplicationType.NONE);
-		application.run();
+		ConfigurableApplicationContext run = application.run();
+		String[] beanDefinitionNames = run.getBeanDefinitionNames();
+		for (String beanDefinitionName : beanDefinitionNames) {
+			System.err.println(beanDefinitionName);
+		}
 		//观察者设计模式
 
 		//SpringFactoriesLoader.loadSpringFactories()

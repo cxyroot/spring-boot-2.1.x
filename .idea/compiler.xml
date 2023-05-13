@@ -103,18 +103,18 @@
       <module name="spring-boot-devtools" options="-parameters" />
       <module name="spring-boot-devtools-tests" options="-parameters" />
       <module name="spring-boot-docs" options="-parameters" />
-      <module name="spring-boot-gradle-plugin" options="" />
+      <module name="spring-boot-gradle-plugin" options="-parameters" />
       <module name="spring-boot-hibernate52-tests" options="-parameters" />
-      <module name="spring-boot-integration-tests" options="" />
+      <module name="spring-boot-integration-tests" options="-parameters" />
       <module name="spring-boot-launch-script-tests" options="-parameters" />
       <module name="spring-boot-loader" options="-parameters" />
       <module name="spring-boot-loader-tools" options="-parameters" />
       <module name="spring-boot-maven-plugin" options="-parameters" />
-      <module name="spring-boot-parent" options="" />
+      <module name="spring-boot-parent" options="-parameters" />
       <module name="spring-boot-properties-migrator" options="-parameters" />
       <module name="spring-boot-sample-jetty" options="-parameters" />
       <module name="spring-boot-sample-tomcat" options="-parameters" />
-      <module name="spring-boot-samples-invoker" options="" />
+      <module name="spring-boot-samples-invoker" options="-parameters" />
       <module name="spring-boot-server-tests" options="-parameters" />
       <module name="spring-boot-starter" options="-parameters" />
       <module name="spring-boot-starter-activemq" options="-parameters" />
@@ -169,12 +169,12 @@
       <module name="spring-boot-starter-web-services" options="-parameters" />
       <module name="spring-boot-starter-webflux" options="-parameters" />
       <module name="spring-boot-starter-websocket" options="-parameters" />
-      <module name="spring-boot-starters" options="" />
+      <module name="spring-boot-starters" options="-parameters" />
       <module name="spring-boot-test" options="-parameters" />
       <module name="spring-boot-test-autoconfigure" options="-parameters" />
       <module name="spring-boot-test-support" options="-parameters" />
-      <module name="spring-boot-tests" options="" />
-      <module name="spring-boot-tools" options="" />
+      <module name="spring-boot-tests" options="-parameters" />
+      <module name="spring-boot-tools" options="-parameters" />
     </option>
   </component>
 </project>
